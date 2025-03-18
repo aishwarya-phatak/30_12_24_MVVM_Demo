@@ -1,11 +1,13 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("org.jetbrains.kotlin.kapt")
+    id("kotlin-kapt")
 }
 
 android {
     namespace = "com.bitcode.a30_12_24_mvvm_demo"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.bitcode.a30_12_24_mvvm_demo"

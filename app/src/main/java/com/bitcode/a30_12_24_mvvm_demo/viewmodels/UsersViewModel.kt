@@ -18,7 +18,7 @@ class UsersViewModel(private val usersRepository: UsersRepository) : ViewModel()
 
     fun fetchUsers(){
         CoroutineScope(Dispatchers.IO).launch {
-            val users = usersRepository.fetchUsers(++pageNumber)
+            val users = usersRepository.fetchUsers(2)
 
             withContext(Dispatchers.Main){
                 this@UsersViewModel.users.addAll(users)
